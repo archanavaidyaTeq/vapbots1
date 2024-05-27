@@ -77,22 +77,16 @@ const App = () => {
         alignItems: "center",
       }}
     >
-      {!connected ? (
+      
         <Button
-          label="Call Vapi’s Pizza Front Desk"
+          label="Start Call"
           onClick={startCallInline}
           isLoading={connecting}
         />
-      ) : (
-        <ActiveCallDetail
-          assistantIsSpeaking={assistantIsSpeaking}
-          volumeLevel={volumeLevel}
-          onEndCallClick={endCall}
-        />
-      )}
+      
+    
 
-      {showPublicKeyInvalidMessage ? <PleaseSetYourPublicKeyMessage /> : null}
-      <ReturnToDocsLink />
+     
     </div>
   );
 };
